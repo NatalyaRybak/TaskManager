@@ -60,6 +60,7 @@
     <Compile Include="MoreInfoWindow.xaml.cs">
       <DependentUpon>MoreInfoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tools\IContentWindow.cs" />
     <Compile Include="Tools\NavigationManager.cs" />
     <Compile Include="Tools\NavigationModel.cs" />
     <Compile Include="Tools\RelayCommand.cs" />

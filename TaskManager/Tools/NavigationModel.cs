@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaskManager.Views;
 
 namespace TaskManager.Tools
@@ -14,10 +10,10 @@ namespace TaskManager.Tools
 
     class NavigationModel
     {
-        private MainWindow _contentWindow;
+        private IContentWindow _contentWindow;
         private ProcessListView _mainView;
 
-        public NavigationModel(MainWindow contentWindow)
+        public NavigationModel(IContentWindow contentWindow)
         {
             _contentWindow = contentWindow;
             _mainView = new ProcessListView();

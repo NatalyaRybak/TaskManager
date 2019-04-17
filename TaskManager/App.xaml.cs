@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Threading;
 using TaskManager.Tools;
 
 namespace TaskManager
@@ -6,18 +7,18 @@ namespace TaskManager
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App 
+    public partial class App
     {
-        protected override void OnStartup (StartupEventArgs e)
+        public App()
+
         {
-            base.OnStartup (e);
-
-            MainWindow contentWindow = new MainWindow();
-
-            NavigationModel navigationModel = new NavigationModel (contentWindow);
-            NavigationManager.Instance.Initialize (navigationModel);
-            contentWindow.Show ();
-            navigationModel.Navigate (ModesEnum.Main);
+            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
         }
-    }
+
+        void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show(e.Exception.Message);
+            e.Handled = true;
+        }
+}
     }

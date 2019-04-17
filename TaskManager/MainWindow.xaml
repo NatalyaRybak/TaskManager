@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="TaskManager" Height="450" Width="800">
-        <ContentControl Name="ContentControl"/>
+    <Grid>
+        <ContentControl Name="_contentControl"/>
+    </Grid>
+    
 
 </Window>

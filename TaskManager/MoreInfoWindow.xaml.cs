@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using TaskManager.Models;
+﻿using TaskManager.Models;
 using TaskManager.ViewModels;
 
 namespace TaskManager
